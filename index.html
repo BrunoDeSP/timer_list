@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer Pomodoro</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="src/main.js"></script>
+     <!-- IONICONS -->
+     <script src="https://unpkg.com/@phosphor-icons/web"></script>
+     <!-- <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script> -->
+</head>
+<body>
+    <section id="clock">
+        <div id="content-clock" class="glass flex">
+            <p>00</p>
+            <span>:</span>
+            <p>00</p>
+        </div>
+        
+    </section>
+
+    <section id="timer" class="inactive">
+        <div id="content-timer" class="glass flex">
+            <span class="flex">
+                <p>00</p>:
+                <p>00</p>:
+                <p>00</p>
+            </span>
+        </div>
+        <div id="buttons-timer" class="flex">
+            <button id="stop" class="ph ph-stop glass"></button>
+            <button id="play" class="ph ph-play glass"></button>
+            <button id="restart" class="ph ph-clock-countdown glass"></button>
+        </div>
+    </section>
+
+    <section id="list-timer" class="glass flex inactive">
+        <div id="add-timer" class="flex">
+            <span class="minutes-timer">0</span>
+            <span class="minutes-timer">0</span>
+            <p>:</p>
+            <span class="seconds-timer">0</span>
+            <span class="seconds-timer">0</span>
+            <button class="ph ph-plus-circle"></button>
+        </div>
+        <div class="sequence-timer glass flex">
+            <p>40:00</p>
+            <button class="ph ph-trash"></button>
+        </div>
+        <div class="sequence-timer glass flex">
+            <p>40:00</p>
+            <button class="ph ph-trash"></button>
+        </div>
+        <div class="sequence-timer glass flex">
+            <p>40:00</p>
+            <button class="ph ph-trash"></button>
+        </div>
+        <div class="sequence-timer glass flex">
+            <p>40:00</p>
+            <button class="ph ph-trash"></button>
+        </div>
+        <div class="sequence-timer glass flex">
+            <p>40:00</p>
+            <button class="ph ph-trash"></button>
+        </div>
+        <div class="sequence-timer glass flex">
+            <p>40:00</p>
+            <button class="ph ph-trash"></button>
+        </div>
+        <div class="sequence-timer glass flex">
+            <p>40:00</p>
+            <button class="ph ph-trash"></button>
+        </div>
+        <div class="sequence-timer glass flex">
+            <p>40:00</p>
+            <button class="ph ph-trash"></button>
+        </div>
+        <div class="sequence-timer glass flex">
+            <p>40:00</p>
+            <button class="ph ph-trash"></button>
+        </div>
+        <div class="sequence-timer glass flex">
+            <p>40:00</p>
+            <button class="ph ph-trash"></button>
+        </div>
+        <div class="sequence-timer glass flex">
+            <p>40:00</p>
+            <button class="ph ph-trash"></button>
+        </div>
+    </section>
+
+    <section id="todolist" class="inactive">
+        <div id="content-header-todolist" class="glass flex">            
+            <input type="text" placeholder="Add task...">
+            <button class="ph ph-plus"></button>
+        </div>
+
+        <div id="content-main-todolist" class="glass flex">
+            <div class="task flex">
+                <button class="ph ph-circle"></button>
+                <p>Task adicionada</p>
+                <button id="dot-one" class="ph-bold ph-dots-three"></button>
+            </div>
+            <div class="task flex">
+                <button class="ph ph-circle"></button>
+                <p>Task adicionada</p>
+                <span></span>
+                <button id="dot-one" class="ph-bold ph-dots-three"></button>
+            </div>
+            <div class="task flex">
+                <button class="ph ph-circle"></button>
+                <p>Task adicionada</p>
+                <span></span>
+                <button id="dot-one" class="ph-bold ph-dots-three"></button>
+            </div>
+            <div class="task flex">
+                <button class="ph ph-circle"></button>
+                <p>Task adicionada</p>
+                <span></span>
+                <button id="dot-one" class="ph-bold ph-dots-three"></button>
+            </div>
+            <div class="task flex">
+                <button class="ph ph-circle"></button>
+                <p>Task adicionada</p>
+                <span></span>
+                <button id="dot-one" class="ph-bold ph-dots-three"></button>
+            </div>
+            <div class="task flex">
+                <button class="ph ph-circle"></button>
+                <p>Task adicionada</p>
+                <span></span>
+                <button id="dot-one" class="ph-bold ph-dots-three"></button>
+            </div>
+            <div class="task flex">
+                <button class="ph ph-circle"></button>
+                <p>Task adicionada</p>
+                <span></span>
+                <button id="dot-one" class="ph-bold ph-dots-three"></button>
+            </div>
+            <div class="task flex">
+                <button class="ph ph-circle"></button>
+                <p>Task adicionada</p>
+                <span></span>
+                <button id="dot-one" class="ph-bold ph-dots-three"></button>
+            </div>
+            <div class="task flex">
+                <button class="ph ph-circle"></button>
+                <p>Task adicionada</p>
+                <span></span>
+                <button id="dot-one" class="ph-bold ph-dots-three"></button>
+            </div>
+            <div class="task flex">
+                <button class="ph ph-circle"></button>
+                <p>Task adicionada</p>
+                <span></span>
+                <button id="dot-one" class="ph-bold ph-dots-three"></button>
+            </div>
+            <div class="task flex">
+                <button class="ph ph-circle"></button>
+                <p>Task adicionada</p>
+                <span></span>
+                <button id="dot-one" class="ph-bold ph-dots-three"></button>
+            </div>
+            
+        </div>
+    </section>
+
+    <section id="contact" class="glass flex">
+        <div id="front-contact">
+            <span>BA</span>
+            <h2>Bruno Barbosa Antunes</h2>
+            <h3>Desenvolvedor Web Backend</h3>
+        </div>
+        <div id="verse-contact" class="inactive"></div>
+        <button id="turn-contact" class="ph ph-arrow-circle-left"></button>
+    </section>
+
+    <section id="navbar">
+        <div id="content-navbar" class="flex glass">
+                <button 
+                    id="one" class="ph-bold ph-timer list active" 
+                    data-position="0"
+                    data-action="navbar">
+                </button>
+
+                <button 
+                    id="two" class="ph-bold ph-list-checks list" 
+                    data-position="1"
+                    data-action="navbar">
+                    </a>
+                </button>
+
+                <button 
+                    id="three" class="ph-bold ph-identification-badge list"
+                    data-position="2"
+                    data-action="navbar">
+                </button>
+        </div>
+        <div id="indicator"></div>
+        
+                
+       
+    </section>
+
+    <section id="config">
+        <label id="toggle-config" class="glass">
+            <input id="checkbox-config" type = 'checkbox'>
+            <span id= 'slider-config'></span>
+        </label>
+    </section>
+
+   
+
+</body>
+</html>

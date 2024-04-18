@@ -1,3 +1,5 @@
 {
-    "liveServer.settings.port": 5501
+    "window.zoomLevel": 1,
+    "workbench.settings.editor": "json",
+    "workbench.settings.useSplitJSON": true
 }

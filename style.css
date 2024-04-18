@@ -121,7 +121,6 @@ body {
     width: 35px;
     height: 10px;
     border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
     background-image: linear-gradient(to bottom,
         #4361EE 0%,
         #4362ee69 100%);
@@ -428,11 +427,29 @@ body {
 /* CONTACT */
 
 #contact {
+    position: relative;
     width: 35rem;
     height: 20rem;
-    border-radius: 2rem;
     padding: 1rem;
+    perspective: 1000px;
 }
+
+/* -- Card Transition -- */
+
+#card-transition-contact {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.9s;
+    transform-style: preserve-3d;
+}
+
+#contact:hover #card-transition-contact{
+    transform: rotateY(-180deg);
+}
+
 
 #turn-contact {
     position: absolute;
@@ -454,36 +471,102 @@ body {
     width: 4rem;
 } */
 
+/* -- front card -- */
+
 #front-contact {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     flex-direction: column;
+    border-radius: 2rem;
     color: #fff;
+    align-items: center;
+    justify-content: center;
     font-family: var(--Title-one);
+    backface-visibility: hidden;
 }
-
 #front-contact span {
     display: flex;
-    width: 4rem;
-    height: 4rem;
-    background-color: #000;
+    width: 7rem;
+    height: 7rem;
     justify-content: center;
     align-items: center;
-    
+}
+
+#front-contact img {
+    width: 7rem;
+    height: 7rem;
 }
 
 #front-contact h2 {
     position: relative;
-    top: 8rem;
-    font-size: 1.8rem;
+    margin-top: 0.5rem;
+    font-size: 1.5rem;
     text-transform: uppercase;
     letter-spacing: 0.3rem;
 }
 
 #front-contact h3 {
     position: relative;
-    top: 8.5rem;
-    font-size: 1.3rem;
+    margin-top: 0.5rem;
+    font-size: 1rem;
     text-transform: uppercase;
     letter-spacing: 0.1rem;
 }
+
+/* -- verse card -- */
+
+#verse-contact {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 2rem;
+    padding-top: 2rem;
+    padding-left: 2rem;
+    flex-direction: column;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+}
+#verse-contact h3 {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    text-transform: uppercase;
+}
+
+#verse-contact p {
+    display: flex;
+    width: 20rem;
+    height: 3.5rem;
+    justify-content: start;
+    align-items: center;
+}
+ 
+#verse-contact p > span {
+    /* left: 0;
+    position: absolute; */
+    font-size: 2rem;
+    margin-right: 1rem;
+}
+
+#verse-contact a {
+    text-decoration: none;
+    color: #000;
+}
+#logo-contact-verse {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    width: 5rem;
+    height: 5rem;
+    justify-content: center;
+}
+
+#logo-contact-verse > img {
+    width: 5rem;
+    height: 5rem;
+}
+

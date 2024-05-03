@@ -446,7 +446,7 @@ body {
     transform-style: preserve-3d;
 }
 
-#contact:hover #card-transition-contact{
+#contact.turn #card-transition-contact{
     transform: rotateY(-180deg);
 }
 
@@ -462,14 +462,33 @@ body {
     font-size: 3rem;
 }
 
-/* #turn-contact::before {
-    content: "";
+.turn-card {
     position: absolute;
     top: 0;
-    left: 0;
-    height: 100%;
+    right: 0;
     width: 4rem;
-} */
+    height: 100%;
+    align-items: center;
+    background: transparent;
+    border: none;
+    overflow-x: scroll;
+    font-size: 3rem;
+}
+
+.turn-card::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    background: transparent;
+}
+
+.ph-arrow-left {
+    transform: translateX(5rem);
+    transition: 0.2s linear;
+}
+
+#contact:hover .ph-arrow-left {
+    transform: translateX(0);
+}
 
 /* -- front card -- */
 
@@ -535,6 +554,7 @@ body {
     font-size: 2.5rem;
     margin-bottom: 3rem;
     text-transform: uppercase;
+    color: var(--light);
 }
 
 #verse-contact p {
@@ -546,8 +566,6 @@ body {
 }
  
 #verse-contact p > span {
-    /* left: 0;
-    position: absolute; */
     font-size: 2rem;
     margin-right: 1rem;
 }
@@ -555,6 +573,10 @@ body {
 #verse-contact a {
     text-decoration: none;
     color: #000;
+}
+
+#verse-contact a:hover {
+    color: var(--light);
 }
 #logo-contact-verse {
     position: absolute;

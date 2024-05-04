@@ -5,11 +5,9 @@ export function turnCard() {
     arrowButtonOne.addEventListener('click', () => {
         let card = document.getElementById("contact")
         card.classList.toggle("turn")
-        console.log(card.className)
     })
     arrowButtonTwo.addEventListener('click', () => {
         let card = document.getElementById("contact")
         card.classList.toggle("turn")
-        console.log(card.className)
     })
 }

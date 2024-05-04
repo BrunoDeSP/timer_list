@@ -208,7 +208,11 @@ body {
 
 #timer {
     position: relative;
-    /* background-color: green; */
+}
+
+#timer.active {
+    position: relative;
+    left: 0;
 }
 
 #content-timer {

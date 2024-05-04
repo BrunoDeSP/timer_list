@@ -7,7 +7,6 @@ export function moveNavbar() {
     controlsNavbar.addEventListener('click', (event) => {
         console.log(event.target)
         const value = Number(event.target.dataset.position)
-        console.log(lastDivValue)
         if(lastDivValue == value) {            
             return
         }
@@ -17,8 +16,31 @@ export function moveNavbar() {
         lastDivValue = value
         lastDiv = document.getElementById(event.target.id)
         event.target.classList.toggle('active')
-        indicatorNavbar.style.transform = `translateX(calc(69px * ${value}))`;
-        console.log(`${lastDivValue} , não sou igual`)
+        indicatorNavbar.style.transform = `translateX(calc(69px * ${value}))`
+        moveContent(value)
     })
     
+}
+
+function moveContent(value) {
+    let timer = document.getElementById("timer")
+    let list = document.getElementById("todolist")
+    let contact = document.getElementById("contact")
+    switch (value) {
+        case 0 :             
+            timer.classList.remove('inactive')
+            list.classList.add('inactive')
+            contact.classList.add('inactive')
+            break;
+        case 1 : 
+            timer.classList.add('inactive')
+            list.classList.remove('inactive')
+            contact.classList.add('inactive')
+            break;
+        case 2 : 
+            timer.classList.add('inactive')
+            list.classList.add('inactive')
+            contact.classList.remove('inactive')
+            break;
+    }
 }
